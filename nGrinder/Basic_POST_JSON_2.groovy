@@ -105,10 +105,10 @@ class TestRunner {
 		result2 = request.POST("http://127.0.0.1:8080/test/create", reqBody.getBytes())
 		
 		
-		if (result2.statusCode == 301 || result.statusCode == 302) {
-			grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", result.statusCode); 
+		if (result2.statusCode == 301 || result2.statusCode == 302) {
+			grinder.logger.warn("Warning. The response may not be correct. The response code was {}.", result2.statusCode); 
 		} else {
-			assertThat(result.statusCode, is(200));
+			assertThat(result2.statusCode, is(200));
 		}
 		
 		
